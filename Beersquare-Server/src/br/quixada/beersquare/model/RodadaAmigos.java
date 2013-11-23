@@ -31,7 +31,7 @@ public class RodadaAmigos {
 	private Bar bar;
 	
 	@ManyToMany(fetch=FetchType.LAZY)
-	@JoinTable(name="rodada_amigos", schema="anotacoes",
+	@JoinTable(name="rodada_amigos",
 	joinColumns={@JoinColumn(name="id_rodada_amigos")},
 	inverseJoinColumns={@JoinColumn(name="id_usuario")})
 	private List<Usuario> amigos = new ArrayList<Usuario>();
