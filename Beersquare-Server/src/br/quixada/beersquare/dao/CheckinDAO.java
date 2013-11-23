@@ -14,7 +14,7 @@ import br.quixada.beersquare.model.Usuario;
 public class CheckinDAO {
 
 	private Session session;
-	//private Checkin checkin;
+	
 	
 	public void novoCheckin(Usuario usuario, Bar bar, Date data){
 		
