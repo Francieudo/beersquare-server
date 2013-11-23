@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sf.json.JSONObject;
+
 import br.quixada.beersquare.controller.ControllerUsuario;
 
 /**
@@ -37,6 +39,12 @@ public class CadastrarUsuarioServlet extends HttpServlet {
 		String nomeUsuario = request.getParameter("nome_usuario");
 		String email = request.getParameter("email");
 		String senha = request.getParameter("senha");
+		
+		boolean isCadastrar = true;
+		
+		if(nomeUsuario == null || email == null || senha == null){
+			isCadastrar = false;
+		}
 		
 		
 	}

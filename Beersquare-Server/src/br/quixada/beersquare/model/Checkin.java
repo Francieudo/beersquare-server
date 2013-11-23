@@ -15,7 +15,7 @@ public class Checkin {
 	private BarCheckinId id;
 	
 	@Column(unique=false)
-	private Date data;
+	private String data;
 
 	public BarCheckinId getId() {
 		return id;
@@ -25,13 +25,15 @@ public class Checkin {
 		this.id = id;
 	}
 
-	public Date getData() {
+	public String getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void setData(String data) {
 		this.data = data;
 	}
+
+	
 	
 	
 }

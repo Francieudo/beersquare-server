@@ -10,6 +10,7 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 import br.quixada.beersquare.model.Bar;
 import br.quixada.beersquare.model.Checkin;
+import br.quixada.beersquare.model.RodadaAmigos;
 import br.quixada.beersquare.model.Usuario;
 
 
@@ -53,6 +54,7 @@ public class CriarTabelas {
 		classes.add(Usuario.class);
 		classes.add(Bar.class);
 		classes.add(Checkin.class);
+		classes.add(RodadaAmigos.class);
 		
 		return classes;
 	}

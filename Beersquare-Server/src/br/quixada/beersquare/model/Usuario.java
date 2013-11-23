@@ -5,8 +5,12 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 /*
@@ -34,6 +38,12 @@ public class Usuario {
 	
 	@OneToMany(mappedBy="id.usuario")
 	private List<Checkin> checkin = new ArrayList<Checkin>();
+	
+	@ManyToMany (fetch = FetchType.LAZY)
+	@JoinTable(name="rodada_amigos", 
+	joinColumns = @JoinColumn(name="id_usuario"),
+	inverseJoinColumns = @JoinColumn(name="id_rodada_amigos"))
+	private List<RodadaAmigos> rodadas = new ArrayList<RodadaAmigos>();
 
 	public long getId() {
 		return id;
@@ -81,6 +91,14 @@ public class Usuario {
 
 	public void setCheckin(List<Checkin> checkin) {
 		this.checkin = checkin;
+	}
+
+	public List<RodadaAmigos> getRodadas() {
+		return rodadas;
+	}
+
+	public void setRodadas(List<RodadaAmigos> rodadas) {
+		this.rodadas = rodadas;
 	}
 
 	@Override

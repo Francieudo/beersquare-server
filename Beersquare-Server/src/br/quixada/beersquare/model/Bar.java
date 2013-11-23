@@ -36,6 +36,9 @@ public class Bar {
 	
 	@OneToMany(mappedBy="id.bar")
 	private List<Checkin> checkin = new ArrayList<Checkin>();
+	
+	@OneToMany(mappedBy="bar")
+	List<RodadaAmigos> rodadas = new ArrayList<RodadaAmigos>(); 
 
 	public long getId() {
 		return id;
@@ -91,6 +94,14 @@ public class Bar {
 
 	public void setCheckin(List<Checkin> checkin) {
 		this.checkin = checkin;
+	}
+
+	public List<RodadaAmigos> getRodadas() {
+		return rodadas;
+	}
+
+	public void setRodadas(List<RodadaAmigos> rodadas) {
+		this.rodadas = rodadas;
 	}
 
 	@Override

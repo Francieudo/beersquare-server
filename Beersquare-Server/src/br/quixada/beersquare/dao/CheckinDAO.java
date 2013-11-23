@@ -16,7 +16,7 @@ public class CheckinDAO {
 	private Session session;
 	
 	
-	public void novoCheckin(Usuario usuario, Bar bar, Date data){
+	public void novoCheckin(Usuario usuario, Bar bar, String data){
 		
 		Checkin checkin = new Checkin();
 		BarCheckinId barcheck = new BarCheckinId();
