@@ -5,8 +5,10 @@ import java.io.Serializable;
 import javax.persistence.Embeddable;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
+import javax.xml.bind.annotation.XmlRootElement;
 
 
+@XmlRootElement
 @Embeddable
 public class BarCheckinId implements Serializable{
 

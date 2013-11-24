@@ -11,6 +11,9 @@ import javax.persistence.OneToMany;
 /*
  * Classe POJO Bar
  */
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 @Entity
 public class Bar {
 

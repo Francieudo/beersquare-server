@@ -12,11 +12,13 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /*
  * Classe POJO do Usuario 
  */
 
+@XmlRootElement
 @Entity
 public class Usuario {
 

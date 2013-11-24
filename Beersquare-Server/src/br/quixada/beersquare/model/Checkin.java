@@ -8,6 +8,9 @@ import javax.persistence.Entity;
 /*
  * Classe POJO checkin
  */
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 @Entity 
 public class Checkin {
 
