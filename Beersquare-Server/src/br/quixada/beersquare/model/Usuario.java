@@ -35,8 +35,8 @@ public class Usuario {
 	@Column(unique=false)
 	private String senha;
 	
-	@Column(unique=false)
-	private byte[] imagem;
+//	@Column(unique=false)
+//	private byte[] imagem;
 	
 	@OneToMany(mappedBy="id.usuario")
 	private List<Checkin> checkin = new ArrayList<Checkin>();
@@ -79,13 +79,13 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public byte[] getImagem() {
-		return imagem;
-	}
-
-	public void setImagem(byte[] imagem) {
-		this.imagem = imagem;
-	}
+//	public byte[] getImagem() {
+//		return imagem;
+//	}
+//
+//	public void setImagem(byte[] imagem) {
+//		this.imagem = imagem;
+//	}
 
 	public List<Checkin> getCheckin() {
 		return checkin;

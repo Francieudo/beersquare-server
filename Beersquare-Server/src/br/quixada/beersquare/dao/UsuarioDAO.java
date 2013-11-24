@@ -17,7 +17,7 @@ public class UsuarioDAO {
 		usuario.setNomeUsuario(usuario.getNomeUsuario());
 		usuario.setEmail(usuario.getEmail());
 		usuario.setSenha(usuario.getSenha());
-		usuario.setImagem(null);
+		
 		
 		boolean sucesso = false;
 		

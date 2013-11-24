@@ -22,16 +22,21 @@ public class Povoa {
 //		bar.setLat("40040040");
 //		bar.setLng("89599599494");
 //		
-//		Usuario usuario = new Usuario();
-//		usuario.setNomeUsuario("blah");
-//		usuario.setEmail("ffhh@jjf.com");
-//		usuario.setSenha("7383");
+		Usuario usuario = new Usuario();
+		usuario.setNomeUsuario("blah");
+		usuario.setEmail("ffhh@jjf.com");
+		usuario.setSenha("7383");
 //		
 //		BarDAO bardao = new BarDAO();
 //		boolean deuCerto =  bardao.cadastrarBar(bar);
 //		
-//		UsuarioDAO daoU = new UsuarioDAO();
-//		boolean certo = daoU.cadastrarUsuario(usuario);
+		UsuarioDAO daoU = new UsuarioDAO();
+		boolean certo = daoU.cadastrarUsuario(usuario);
+		
+		Usuario s = new Usuario();
+		s =  daoU.retornaUsuarioPor("ffhh@jjf.com");
+		
+		System.out.println(s.getNomeUsuario());
 //		System.out.println(deuCerto);
 //		System.out.println(certo);
 //		

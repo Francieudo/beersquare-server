@@ -5,9 +5,14 @@ import br.quixada.beersquare.model.Usuario;
 
 public class ControllerUsuario {
 
+	private UsuarioDAO usuarioDao = new UsuarioDAO();
+	
 	public boolean cadastraUsuario(Usuario usuario){
-		UsuarioDAO usuarioDao = new UsuarioDAO();
 		
 		return usuarioDao.cadastrarUsuario(usuario);
+	}
+	
+	public Usuario retornaUsuarioPor(String email){
+		return usuarioDao.retornaUsuarioPor(email);
 	}
 }
