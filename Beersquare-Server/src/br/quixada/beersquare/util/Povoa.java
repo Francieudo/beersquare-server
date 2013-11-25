@@ -4,6 +4,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import com.google.gson.Gson;
+
 import br.quixada.beersquare.dao.BarDAO;
 import br.quixada.beersquare.dao.CheckinDAO;
 import br.quixada.beersquare.dao.UsuarioDAO;
@@ -30,13 +32,15 @@ public class Povoa {
 //		BarDAO bardao = new BarDAO();
 //		boolean deuCerto =  bardao.cadastrarBar(bar);
 //		
+		Gson g = new Gson();
 		UsuarioDAO daoU = new UsuarioDAO();
 		boolean certo = daoU.cadastrarUsuario(usuario);
 		
 		Usuario s = new Usuario();
 		s =  daoU.retornaUsuarioPor("ffhh@jjf.com");
 		
-		System.out.println(s.getNomeUsuario());
+		System.out.println(g.toJson(s));
+		//System.out.println(s.toString());
 //		System.out.println(deuCerto);
 //		System.out.println(certo);
 //		

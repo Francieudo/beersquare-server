@@ -7,6 +7,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
+import com.google.gson.Gson;
+
 import net.sf.json.JSONObject;
 
 import br.quixada.beersquare.controller.ControllerUsuario;
@@ -32,19 +34,19 @@ public class UsuarioResource {
 	
 	@POST
 	@Consumes("application/json")
-	//@Produces("application/json")
-	public void cadastrarNovoUsuario(Usuario usuario){
+	@Produces("application/json")
+	public String cadastrarNovoUsuario(Usuario usuario){
+		
 		boolean sucesso = controller.cadastraUsuario(usuario);
 		
-		//JSONObject json = new JSONObject();
-//		if(sucesso){
-//			json.put("mensagem","Usuario cadastrado.");
-//			json.put("status", "2");
-//			return json;
-//		}else{
-//			json.put("mensagem","Usuario já cadastrado.");
-//			json.put("status", "0");
-//			return json;
-//		}
+		
+		if(sucesso){
+			
+			String s = "{\"mensagem\":\"Cadastro feito com sucesso\"}";
+			return s;
+		}else{
+			String s = "{\"mensagem\":\"Cadastro não realizado\"}";
+			return s;
+		}
 	}
 }
