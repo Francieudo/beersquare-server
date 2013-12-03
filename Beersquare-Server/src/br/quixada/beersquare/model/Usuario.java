@@ -123,14 +123,5 @@ public class Usuario {
 		if (id != other.id)
 			return false;
 		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "Usuario [id=" + id + ", nomeUsuario=" + nomeUsuario
-				+ ", email=" + email + ", senha=" + senha + ", checkin="
-				+ checkin + ", rodadas=" + rodadas + "]";
-	}
-
-	
+	}	
 }

@@ -1,15 +1,9 @@
 package br.quixada.beersquare.dao;
 
-import javax.persistence.NoResultException;
-
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
-import org.hibernate.Query;
 import org.hibernate.classic.Session;
 import org.hibernate.criterion.Restrictions;
-
-import com.sun.xml.internal.ws.developer.Stateful;
-
 import br.quixada.beersquare.model.Usuario;
 import br.quixada.beersquare.util.PreparaSessao;
 
@@ -56,5 +50,9 @@ public class UsuarioDAO {
 		//session.close();
 		return usuario;
 
+	}
+	
+	public Usuario retornarUsuarioPor(String email, String senha){
+		return null;
 	}
 }

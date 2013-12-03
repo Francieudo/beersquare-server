@@ -1,7 +1,5 @@
 package br.quixada.beersquare.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
